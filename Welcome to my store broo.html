@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my store</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #e53935;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        .page {
+            min-height: 70vh;
+            padding-bottom: 40px;
+        }
+
+        .about {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 40px 30px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .about h2 {
+            color: #e53935;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .about p {
+            font-size: 18px;
+            margin-bottom: 18px;
+            color: #333;
+        }
+
+        .products {
+            width: 95%;
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .products h2 {
+            color: #e53935;
+            margin-bottom: 25px;
+            font-size: 1.9rem;
+        }
+
+        .product-list {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .product {
+            width: 250px;
+            background-color: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .product h3 {
+            margin: 10px 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .product p {
+            color: #666;
+            min-height: 45px;
+            font-size: 15px;
+        }
+
+        .price {
+            color: #e53935;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 12px 0;
+        }
+
+        button, .btn {
+            background-color: #e53935;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            margin-top: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn {
+            margin-top: 30px;
+            background-color: #555;
+        }
+
+        .cart-box {
+            width: 95%;
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cart-box h2 {
+            color: #e53935;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .empty-cart {
+            text-align: center;
+            color: #888;
+            padding: 40px 0;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 600px) {
+            .product {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to my store</h1>
+        <nav>
+            <a href="#trang1">Trang chủ</a>
+            <a href="#trang2">Sản phẩm</a>
+            <a href="#trang3">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <section id="trang1" class="page">
+        <div class="about">
+            <h2>CHÀO MỪNG ĐẾN VỚI CỬA HÀNG CỦA TÔI</h2>
+            <p>Cửa hàng tôi là tiệm trà và cafe chuyên cung cấp các loại cà phê, trà và đồ uống thơm ngon.</p>
+            <p>Chúng tôi luôn mong muốn mang đến cho khách hàng những sản phẩm chất lượng, giá cả hợp lý và phục vụ tận tình.</p>
+            <p>Hãy đến với My Store để thưởng thức những thức uống yêu thích của bạn!</p>
+            <a href="#trang2" class="btn">Xem sản phẩm</a>
+        </div>
+    </section>
+
+    <section id="trang2" class="page">
+        <div class="products">
+            <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop" alt="Mocha Cappuccino">
+                    <h3>Mocha Cappuccino</h3>
+                    <p>Cà phê thơm ngon, béo nhẹ</p>
+                    <div class="price">50.000đ</div>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" alt="Cafe">
+                    <h3>Cafe</h3>
+                    <p>Cà phê đậm đà, thơm ngon</p>
+                    <div class="price">30.000đ</div>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop" alt="Tea">
+                    <h3>Tea</h3>
+                    <p>Trà thanh mát, dễ uống</p>
+                    <div class="price">20.000đ</div>
+                    <button>Thêm vào giỏ</button>
+                </div>
+
+                <div class="product">
+                    <img src="https://images.unsplash.com/photo-1558857563-b371033873b8?w=400&h=300&fit=crop" alt="Trà đào">
+                    <h3>Trà đào</h3>
+                    <p>Trà đào mát lạnh, thơm ngon</p>
+                    <div class="price">25.000đ</div>
+                    <button>Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <br>
+            <a href="#trang1" class="btn back-btn">← Quay lại Trang chủ</a>
+        </div>
+    </section>
+
+    <section id="trang3" class="page">
+        <div class="cart-box">
+            <h2>GIỎ HÀNG CỦA BẠN</h2>
+            <div class="empty-cart">
+                Giỏ hàng đang trống. Hãy chọn sản phẩm nhé!
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Tea and Cafe</p>
+        <p>Hotline: 097 368 3235</p>
+        <p>Địa chỉ: 36 Đường đời, Quận 18, tổng 9</p>
+    </footer>
+
+</body>
+</html>
